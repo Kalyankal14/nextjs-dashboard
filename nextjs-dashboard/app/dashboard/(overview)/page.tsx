@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+=======
+>>>>>>> Stashed changes
 import CardWrapper from '@/app/ui/dashboard/cards';
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
@@ -12,6 +14,14 @@ export const metadata: Metadata = {
   title: 'Dashboard',
 };
 
+=======
+import {
+  RevenueChartSkeleton,
+  LatestInvoicesSkeleton,
+  CardSkeleton,
+} from '@/app/ui/skeletons';
+
+>>>>>>> Stashed changes
 export default async function Page() {
   return (
     <main>
@@ -20,6 +30,9 @@ export default async function Page() {
       </h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       <Suspense fallback={<CardsSkeleton />}>
+=======
+        <Suspense fallback={<CardSkeleton />}>
+>>>>>>> Stashed changes
           <CardWrapper />
         </Suspense>
       </div>
